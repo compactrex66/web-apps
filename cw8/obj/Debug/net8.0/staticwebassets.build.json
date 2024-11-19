@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "wyVab6E/3ov/Dz/XyrJ9zboJh5AZCAZHZqiUv44vZkw=",
+  "Source": "cw8",
+  "BasePath": "_content/cw8",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "cw8\\wwwroot",
+      "Source": "cw8",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\WebApps\\cw8\\wwwroot\\",
+      "BasePath": "_content/cw8",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\WebApps\\cw8\\wwwroot\\style.css",
+      "SourceId": "cw8",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\WebApps\\cw8\\wwwroot\\",
+      "BasePath": "_content/cw8",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
