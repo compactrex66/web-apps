@@ -1,0 +1,242 @@
+body {
+    display: flex;
+    background: #ddd !important;
+    flex-direction: column;
+    height: auto;
+}
+.reserved {
+    background-color: rgb(196, 80, 80);
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+.notReserved:hover {
+    background-color: aqua;
+}
+.notReserved {
+    transition: 0.2s;
+}
+.calendar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(164, 205, 211);
+    width: fit-content;
+    padding: 2vw;
+    border: 3px solid white;
+    border-radius: 20px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+.row > * {
+    display: inline;
+}
+.day {
+    width: 5vw;
+    aspect-ratio: 1;
+    text-align: right;
+}
+td {
+    border: 2px solid white;
+}
+table {
+    border-collapse: collapse;
+}
+.date {
+    align-self: center;
+}
+.nextMonth {
+    opacity: 50%;
+}
+.card {
+    text-shadow: none;
+}
+.container-fluid {
+    margin: 20px;
+}
+main {
+    background: #ddd !important;
+}
+.transitioning {
+    width: 1920px;
+    background: linear-gradient(0, rgba(51,51,51,1) 0%, rgba(0,212,255,0) 100%);
+    height: 100px;
+    position: absolute;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-shadow: none;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.desc {
+    width: 60vw;
+    font-size: 1.5em;
+}
+.karty {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 40vw;
+    gap: 2vh;
+    margin-right: 20px;
+}
+.karta {
+    font-size: 1.5em;
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+}
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height: 100%; */
+  /*min-height: 100%;*/
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+.site-wrapper-inner:hover {
+  backdrop-filter: none;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 5;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+}
