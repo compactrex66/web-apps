@@ -1,0 +1,20 @@
+﻿@model List<Student>
+
+<h1>Lista Studentów</h1>
+<table>
+    <tr>
+        <th>Lp</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Wiek</th>
+    </tr>
+    @{int lp = 1;}
+    @foreach(Student student in Model) {
+        <tr>
+            <td>@lp</td>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.Age</td>
+        </tr>
+    }
+</table>

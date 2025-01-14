@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+header {
+    display: flex;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+nav {
+
+}
+nav > a {
+    text-decoration: none;
+    padding: 20px;
+}
