@@ -8,14 +8,26 @@ namespace layout.Controllers
     {
         // GET: StudentsController
         private readonly IStudentRepo _studentRepo;
-        public StudentsController() {
-            _studentRepo = new FakeStudentRepo();
+        private readonly string? _connectionString;
+        public StudentsController(IConfiguration configuration) {
+            _connectionString = configuration.GetConnectionString("mysql");
+            _studentRepo = new MySqlStudentRepo(_connectionString);
         }
         public ActionResult List()
         {
             return View(_studentRepo.GetAllStudents());
         }
+
+        [HttpGet]
         public IActionResult Create() {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Student student) {
+            if(ModelState.IsValid) {
+                _studentRepo.AddStudent(student);
+                return RedirectToAction("List");
+            }
             return View();
         }
     }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\student\\Desktop\\layout\\layout.csproj": {}
+    "C:\\Users\\Egzamin\\Desktop\\layout\\layout.csproj": {}
   },
   "projects": {
-    "C:\\Users\\student\\Desktop\\layout\\layout.csproj": {
+    "C:\\Users\\Egzamin\\Desktop\\layout\\layout.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\student\\Desktop\\layout\\layout.csproj",
+        "projectUniqueName": "C:\\Users\\Egzamin\\Desktop\\layout\\layout.csproj",
         "projectName": "layout",
-        "projectPath": "C:\\Users\\student\\Desktop\\layout\\layout.csproj",
-        "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\student\\Desktop\\layout\\obj\\",
+        "projectPath": "C:\\Users\\Egzamin\\Desktop\\layout\\layout.csproj",
+        "packagesPath": "C:\\Users\\Egzamin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Egzamin\\Desktop\\layout\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Egzamin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

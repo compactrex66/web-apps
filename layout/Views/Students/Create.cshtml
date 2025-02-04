@@ -1,1 +1,20 @@
-﻿<h2>Dodawanie Studenta</h2>
+﻿@model Student
+<h1>Dodawanie Studenta</h1>
+<form asp-action="Create" method="post" class="container">
+    <div class="row">
+        <label asp-for="FirstName"></label>
+        <input type="text" asp-for="FirstName">
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div class="row">
+        <label asp-for="LastName"></label>
+        <input type="text" asp-for="LastName">
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Age"></label>
+        <input type="text" asp-for="Age">
+        <span asp-validation-for="Age"></span>
+    </div>
+    <input type="submit">
+</form>

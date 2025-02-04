@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cxEQW3us4Xbm3roMpmcwYx5kOlPC2Gl4FU0ynvGCmEs=",
+  "Hash": "V6RK4DTGVIvTnBsstM94v+gyXiFVZxQGKvyWGSy6XQw=",
   "Source": "layout",
   "BasePath": "_content/layout",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "layout\\wwwroot",
       "Source": "layout",
-      "ContentRoot": "C:\\Users\\student\\Desktop\\layout\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
       "BasePath": "_content/layout",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\student\\Desktop\\layout\\wwwroot\\style.css",
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\style.css",
       "SourceId": "layout",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\student\\Desktop\\layout\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
       "BasePath": "_content/layout",
       "RelativePath": "style.css",
       "AssetKind": "All",
