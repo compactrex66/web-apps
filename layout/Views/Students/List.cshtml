@@ -7,6 +7,7 @@
         <th>Imię</th>
         <th>Nazwisko</th>
         <th>Wiek</th>
+        <th>Operacje</th>
     </tr>
     @{int lp = 1;}
     @foreach(Student student in Model) {
@@ -15,6 +16,8 @@
             <td>@student.FirstName</td>
             <td>@student.LastName</td>
             <td>@student.Age</td>
+            <td><a asp-action="Delete" asp-route-id="@student.Id">Usuń</a></td>
         </tr>
+        lp++;
     }
 </table>

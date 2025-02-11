@@ -14,22 +14,32 @@ public class MySqlStudentRepo : IStudentRepo
 
     public void AddStudent(Student student)
     {
-        throw new NotImplementedException();
+        using var connection = new MySqlConnection(_connectionString);
+        MySqlCommand command = connection.CreateCommand();
+        command.CommandText = "INSERT INTO students (first_name, last_name, age) values(" + $"'{student.FirstName}', '{student.LastName}', '{student.Age}'" + ")";
+        connection.Open();
+        command.ExecuteNonQuery();
+        connection.Close();
     }
 
     public void DeleteStudent(int id)
     {
-        throw new NotImplementedException();
+        using var connection = new MySqlConnection(_connectionString);
+        MySqlCommand command = connection.CreateCommand();
+        command.CommandText = "DELETE FROM students WHERE id="+$"'{id}'"+"";
+        connection.Open();
+        command.ExecuteNonQuery();
+        connection.Close();
     }
 
     public List<Student> GetAllStudents()
     {
         using var connection = new MySqlConnection(_connectionString);
-        MySqlCommand commnad = connection.CreateCommand();
-        commnad.CommandText = "SELECT * FROM students";
+        MySqlCommand command = connection.CreateCommand();
+        command.CommandText = "SELECT * FROM students";
         connection.Open();
         List<Student> students = new List<Student>();
-        var reader = commnad.ExecuteReader();
+        var reader = command.ExecuteReader();
         while(reader.Read()) {
             students.Add(
                 new Student {

@@ -17,7 +17,6 @@ namespace layout.Controllers
         {
             return View(_studentRepo.GetAllStudents());
         }
-
         [HttpGet]
         public IActionResult Create() {
             return View();
@@ -29,6 +28,10 @@ namespace layout.Controllers
                 return RedirectToAction("List");
             }
             return View();
+        }
+        public IActionResult Delete(int? id) {
+            _studentRepo.DeleteStudent();
+            return RedirectToAction("List");
         }
     }
 }
