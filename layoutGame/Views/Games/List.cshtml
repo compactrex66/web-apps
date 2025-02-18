@@ -1,0 +1,23 @@
+﻿@model List<Game>
+
+<h1>Lista Studentów</h1>
+<table>
+    <tr>
+        <th>Lp</th>
+        <th>Tytuł</th>
+        <th>Deweloper</th>
+        <th>Cena</th>
+        <th>Operacje</th>
+    </tr>
+    @{int lp = 1;}
+    @foreach(Game game in Model) {
+        <tr>
+            <td>@lp</td>
+            <td>@game.GameTitle</td>
+            <td>@game.Developer</td>
+            <td>@game.Price</td>
+            <td><a asp-action="Delete" asp-route-id="@game.Id">Usuń</a></td>
+        </tr>
+        lp++;
+    }
+</table>

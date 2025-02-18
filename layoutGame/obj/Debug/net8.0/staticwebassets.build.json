@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "V6RK4DTGVIvTnBsstM94v+gyXiFVZxQGKvyWGSy6XQw=",
+  "Source": "layout",
+  "BasePath": "_content/layout",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "layout\\wwwroot",
+      "Source": "layout",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
+      "BasePath": "_content/layout",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\style.css",
+      "SourceId": "layout",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
+      "BasePath": "_content/layout",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
