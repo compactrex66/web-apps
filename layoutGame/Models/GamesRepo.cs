@@ -15,7 +15,7 @@ public class GamesRepo
     {
         using var connection = new MySqlConnection(_connectionString);
         MySqlCommand command = connection.CreateCommand();
-        command.CommandText = "INSERT INTO games (game_title, developer, price) values(" + $"'{game.GameTitle}', '{game.Developer}', '{game.Price}'" + ")";
+        command.CommandText = "INSERT INTO games (game_title, developer, price) values(" + $"'{game.GameTitle}', '{game.Developer}', '{game.Price.ToString().Replace(',', '.')}'" + ")";
         connection.Open();
         command.ExecuteNonQuery();
         connection.Close();
@@ -53,13 +53,23 @@ public class GamesRepo
         return games;
     }
 
-    public Game GetGameById(int id)
+    public Game? GetGameById(int id)
     {
-        throw new NotImplementedException();
+        foreach(Game game in GetAllGames()) {
+            if(game.Id == id) {
+                return game;
+            }
+        }
+        return null;
     }
 
     public void UpdateGame(Game game)
     {
-        throw new NotImplementedException();
+        using var connection = new MySqlConnection(_connectionString);
+        MySqlCommand command = connection.CreateCommand();
+        command.CommandText = "UPDATE games SET id="+game.Id+", game_title='"+game.GameTitle+"', developer='"+game.Developer+"', price="+game.Price.ToString().Replace(',', '.')+" WHERE id="+game.Id+"";
+        connection.Open();
+        command.ExecuteNonQuery();
+        connection.Close();
     }
 }

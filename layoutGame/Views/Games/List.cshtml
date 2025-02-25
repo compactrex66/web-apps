@@ -16,7 +16,7 @@
             <td>@game.GameTitle</td>
             <td>@game.Developer</td>
             <td>@game.Price</td>
-            <td><a asp-action="Delete" asp-route-id="@game.Id">Usuń</a></td>
+            <td><a asp-action="Delete" asp-route-id="@game.Id">Usuń</a> | <a asp-action="Update" asp-route-id="@game.Id">Edytuj</a></td>
         </tr>
         lp++;
     }

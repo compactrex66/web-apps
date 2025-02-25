@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V6RK4DTGVIvTnBsstM94v+gyXiFVZxQGKvyWGSy6XQw=",
+  "Hash": "+ASOV9q8hrLkK+s8u/aA3ldKIIH5Dr0vv1dG06r6+PY=",
   "Source": "layout",
   "BasePath": "_content/layout",
   "Mode": "Default",
@@ -10,17 +10,36 @@
     {
       "Name": "layout\\wwwroot",
       "Source": "layout",
-      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\",
       "BasePath": "_content/layout",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\style.css",
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\script.js",
       "SourceId": "layout",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\",
+      "BasePath": "_content/layout",
+      "RelativePath": "script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\style.css",
+      "SourceId": "layout",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\",
       "BasePath": "_content/layout",
       "RelativePath": "style.css",
       "AssetKind": "All",

@@ -1,0 +1,22 @@
+﻿@model Game
+
+<h1>Zaktualizuj dane</h1>
+<form asp-action="Update" method="post" class="container" name="form">
+    <div class="row">
+        <label asp-for="GameTitle"></label>
+        <input type="text" asp-for="GameTitle" value="@Model.GameTitle" name="gameTitle">
+        <span asp-validation-for="GameTitle"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Developer"></label>
+        <input type="text" asp-for="Developer" value="@Model.Developer" name="developer">
+        <span asp-validation-for="Developer"></span>
+    </div>
+    <div class="row">
+        <label asp-for="Price"></label>
+        <input type="number" asp-for="Price" step=".01" value="@Model.Price" name="price">
+        <span asp-validation-for="Price"></span>
+    </div>
+    <input type="button" value="Zaktualizuj" onclick="validateData()">
+    <div id="result"></div>
+</form>

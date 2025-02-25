@@ -32,5 +32,14 @@ namespace layout.Controllers
             _gamesRepo.DeleteGame(id);
             return RedirectToAction("List");
         }
+        [HttpGet]
+        public IActionResult Update(int id) {
+            return View(_gamesRepo.GetGameById(id));
+        }
+        [HttpPost]
+        public IActionResult Update(Game game) {
+            _gamesRepo.UpdateGame(game);
+            return RedirectToAction("List");
+        }
     }
 }

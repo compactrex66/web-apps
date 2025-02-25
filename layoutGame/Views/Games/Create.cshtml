@@ -1,20 +1,21 @@
 ﻿@model Game
 <h1>Dodawanie Gry</h1>
-<form asp-action="Create" method="post" class="container">
+<form asp-action="Create" method="post" class="container" name="form">
     <div class="row">
         <label asp-for="GameTitle"></label>
-        <input type="text" asp-for="GameTitle">
+        <input type="text" asp-for="GameTitle" name="gameTitle">
         <span asp-validation-for="GameTitle"></span>
     </div>
     <div class="row">
         <label asp-for="Developer"></label>
-        <input type="text" asp-for="Developer">
+        <input type="text" asp-for="Developer" name="developer">
         <span asp-validation-for="Developer"></span>
     </div>
     <div class="row">
         <label asp-for="Price"></label>
-        <input type="number" asp-for="Price" step=".01">
+        <input type="number" asp-for="Price" step=".01" name="price">
         <span asp-validation-for="Price"></span>
     </div>
-    <input type="submit">
+    <input type="button" value="Utwórz" onclick="validateData()">
+    <div id="result"></div>
 </form>

@@ -1,7 +1,11 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Egzamin\\Desktop\\layout\\wwwroot\\style.css",
+      "Id": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\script.js",
+      "PackagePath": "staticwebassets\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Egzamin\\Desktop\\layoutGame\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {
