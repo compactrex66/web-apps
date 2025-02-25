@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\cw5.props" />
-</Project>
