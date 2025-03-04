@@ -1,0 +1,53 @@
+body {
+    font-family: Verdana;
+    background-color: #F6E5DC;
+}
+header {
+    background-color: #2F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+}
+.left {
+    width: 60%;
+    align-items: flex-start;
+}
+.right {
+    font-size: 150%;
+    padding: 70px;
+}
+.bottom {
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+}
+footer {
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+}
+img {
+    height: 350px;
+    object-fit: contain;
+}
+button {
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.centered {
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.fit-content {
+    width: fit-content;
+}
