@@ -1,0 +1,55 @@
+﻿@model List<Reservation>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/styl_1.css">
+    <title>Restaurajca wszystkie smaki</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Witamy w restauracji „Wszystkie Smaki”</h1>
+        </header>
+        <main class="container">
+            <div class="row">
+                <div class="left"><img src="~/menu.jpg" alt="Nasze danie"></div>
+                <span class="right">
+                    @if(Model.Count() > 0) {
+                        int lp = 1;
+                        <h3>Rezerwacje</h3>
+                        <table>
+                            <tr>
+                                <th>Lp</th>
+                                <th>Numer stolika</th>
+                                <th>Data</th>
+                                <th>Liczba osób</th>
+                                <th>Telefon</th>
+                            </tr>
+                            @foreach(Reservation reservation in Model) {
+                                <tr>
+                                    <td>@lp</td>
+                                    <td>@reservation.TableNumber</td>
+                                    <td>@reservation.Date</td>
+                                    <td>@reservation.PeopleCount</td>
+                                    <td>@reservation.PhoneNumber</td>
+                                </tr>
+                            }
+                        </table>
+                    } else {
+                        <h3>Brak Rezerwacji</h3>
+                    }
+                </span>
+            </div>
+            <span class="bottom container centered">
+                <h1>Zarezerwowano stolik on-line</h1>
+            </span>
+        </main>
+        <footer>
+            Stronę internetową opracował: 000000000
+        </footer>
+    </div>
+</body>
+</html>
