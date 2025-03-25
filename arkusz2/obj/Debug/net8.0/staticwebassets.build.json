@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "X/wKTUq60zbACMHSjbkQ/QolXXRPZWV5ayebXU5VO7k=",
+  "Source": "arkusz2",
+  "BasePath": "_content/arkusz2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "arkusz2\\wwwroot",
+      "Source": "arkusz2",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\",
+      "BasePath": "_content/arkusz2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\media\\obraz1.jpg",
+      "SourceId": "arkusz2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\",
+      "BasePath": "_content/arkusz2",
+      "RelativePath": "media/obraz1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\obraz1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\media\\zad1.png",
+      "SourceId": "arkusz2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\",
+      "BasePath": "_content/arkusz2",
+      "RelativePath": "media/zad1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\zad1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\style.css",
+      "SourceId": "arkusz2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Egzamin\\Desktop\\arkusz2\\wwwroot\\",
+      "BasePath": "_content/arkusz2",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}

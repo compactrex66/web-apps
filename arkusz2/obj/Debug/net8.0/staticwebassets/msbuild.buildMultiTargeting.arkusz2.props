@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\arkusz2.props" />
+</Project>

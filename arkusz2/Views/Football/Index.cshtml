@@ -1,0 +1,13 @@
+﻿@model List<Player>
+
+<h2>Reprezentacja Polski</h2>
+<p>Podaj pozycję zawodników (1-bramkarze, 2-obrońcy, 3-pomocnicy, 4-napastnicy):</p>
+<form asp-action="ListChosen" method="post">
+    <input type="number" name="chosen">
+    <button>Sprawdź</button>
+</form>
+<ul>
+    @foreach(Player player in Model) {
+        <li>@player.FirstName @player.LastName</li>
+    }
+</ul>
