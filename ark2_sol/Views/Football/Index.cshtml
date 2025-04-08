@@ -1,0 +1,36 @@
+﻿@model MyPlayer
+
+<div id="mecze">
+    @foreach (var game in ViewBag.games)
+    {
+        <div class="info">
+            <h3>@game.team1 - @game.team2</h3>
+            <h4>@game.result</h4>
+            <p>w dniu @game.date</p>
+        </div>
+    }
+</div>
+
+<div id="glowny">
+    <h2>Reprezentacje Polski</h2>
+</div>
+<div id="lewy">
+    <p>Podaj pozycję zawodników (1-bramkarze, 2-obrońcy, 3-pomocnicy, 4-napastnicy)</p>
+    <form asp-action="Players" method="post">
+        <input type="number" asp-for="Number" name="Number">
+        <input type="submit" value="Sprawdź">
+    </form>
+    <ul>
+        @if (ViewBag.players != null)
+        {
+            foreach (MyPlayer player in ViewBag.players)
+            {
+                <li>@player.Name @player.Surname</li>
+            }
+        }
+    </ul>
+</div>
+<div id="prawy">
+    <img src="~/zad1.png" alt="piłkarz">
+    <p>Autor: 1234567890</p>
+</div>

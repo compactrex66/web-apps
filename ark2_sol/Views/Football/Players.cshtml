@@ -1,0 +1,40 @@
+﻿@model MyPlayer
+
+<div id="mecze">
+    @foreach (var game in ViewBag.games)
+    {
+        <div class="info">
+            <h3>@game.team1 - @game.team2</h3>
+            <h4>@game.result</h4>
+            <p>w dniu @game.date</p>
+        </div>
+    }
+</div>
+
+<div id="glowny">
+    <h2>Reprezentacje Polski</h2>
+</div>
+<div id="lewy">
+@if (ViewBag.players != null)
+{
+    <table>
+        <tr>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>Pozycja</th>
+        </tr>
+    @foreach (MyPlayer player in ViewBag.players)
+    {
+        <tr>
+            <td>@player.Name</td>
+            <td>@player.Surname</td>
+            <td>@player.PositionName</td>
+        </tr>
+    }
+    </table>
+}
+</div>
+<div id="prawy">
+    <img src="~/zad1.png" alt="piłkarz">
+    <p>Autor: 1234567890</p>
+</div>
