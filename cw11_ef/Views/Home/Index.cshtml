@@ -1,7 +1,23 @@
 ﻿@model List<Book>
 <h3>Strona Index</h3>
-@foreach (Book b in Model){
-    <div>
-        <p>@b.Id - @b.Title - @b.Author - @b.PublishedDate.ToLongDateString() - @b.EditorId</p>
-    </div>
-}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tytuł</th>
+            <th>Autor</th>
+            <th>Data wydania</th>
+            <th>Id wydawcy</th>
+        </tr>
+    </thead>
+    @foreach(Book book in Model) { 
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+            <td>@book.PublishedDate</td>
+            <td>@book.EditorId</td>
+            <td><a asp-action="DeleteBook" asp-route-id="@book.Id" class="btn btn-danger">Usuń</a></td>
+        </tr>
+    }
+</table>

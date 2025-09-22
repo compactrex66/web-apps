@@ -2,6 +2,8 @@ using cw11_ef.Models;
 using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace cw11_ef.Controllers
 {
@@ -26,13 +28,25 @@ namespace cw11_ef.Controllers
         [HttpPost]
         public IActionResult AddBook(Book book)
         {
-            if (ModelState.IsValid)
+
+            var editor = _context.Editors.FirstOrDefault(e => e.Id == book.EditorId);
+            if (editor != null)
             {
                 _context.Books.Add(book);
+                editor.Books.Add(book);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
             }
-            return View();
+            return RedirectToAction("Index");
+        }
+        public IActionResult DeleteBook(int? id)
+        {
+            var toDelete = _context.Books.FirstOrDefault(e => e.Id == id);
+            if (toDelete != null)
+            {
+                _context.Books.Remove(toDelete);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult AddEditor()
@@ -83,7 +97,8 @@ namespace cw11_ef.Controllers
         }
         public ActionResult Editors()
         {
-            return View(_context.Editors.ToList());
-        }
+            var editorWithBooks = _context.Editors.Include(e => e.Books).ToList();
+            return View(editorWithBooks);
+        }   
     }
 }

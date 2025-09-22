@@ -14,7 +14,6 @@ public class BooksContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        //dodanie startowych danych
         modelBuilder.Entity<Book>()
             .HasOne(e => e.Editor)
             .WithMany(e => e.Books)

@@ -12,6 +12,7 @@ public class Book
     public string Author { get; set; }
     [DisplayName("Data publikacji")]
     public DateTime PublishedDate { get; set; }
+    [DisplayName("Id edytora")]
     public int EditorId { get; set; }
     public Editor Editor { get; set; }
 }
