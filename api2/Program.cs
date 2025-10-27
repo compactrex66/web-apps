@@ -1,6 +1,7 @@
 using api2.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IBooksRepo, BooksRepo>();
 builder.Services.AddCors(options =>
 {
@@ -14,9 +15,13 @@ builder.Services.AddCors(options =>
 });
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.MapDefaultControllerRoute();
+
 app.UseCors("AllowAll");
-app.MapGet("/", () => "Hello World!");
+
 app.MapGet("/books", (IBooksRepo repo) => repo.GetAll());
+
 app.MapGet("/books/{id}", (IBooksRepo repo, int id) =>
 {
     var book = repo.GetBook(id);
@@ -26,6 +31,7 @@ app.MapGet("/books/{id}", (IBooksRepo repo, int id) =>
     }
     return Results.Ok(book);
 });
+
 app.MapPost("/books", (IBooksRepo repo, Book book) =>
     {
         repo.AddBook(book);

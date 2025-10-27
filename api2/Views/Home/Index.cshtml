@@ -1,0 +1,30 @@
+﻿<h1>Book list</h1>
+<table id="bookListTable">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publish Date</th>
+    </tr>
+</table>
+<script>
+    let table = document.getElementById("bookListTable");
+    let json;
+    let request = new XMLHttpRequest();
+    request.open("GET", "http://localhost:5284/books")
+    request.onload = () => {
+        json = JSON.parse(request.responseText);
+        console.log(json)
+        json.forEach((element) => {
+            table.innerHTML += `
+                <tr>
+                    <td>${element.id}</td>
+                    <td>${element.title}</td>
+                    <td>${element.author}</td>
+                    <td>${element.publishDate}</td>
+                </tr>
+            `;
+        })
+    }
+    request.send();
+</script>

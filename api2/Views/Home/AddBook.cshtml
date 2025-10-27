@@ -1,0 +1,32 @@
+﻿<h1>Add Book</h1>
+<form name="addBookForm">
+    <label>Title</label>
+    <input type="text" name="title">
+    <br>
+    <label>Author</label>
+    <input type="text" name="author">
+    <br>
+    <label>Date</label>
+    <input type="date" name="date">
+    <br>
+    <button type="button" name="submitBtn">Submit</button>
+</form>
+<script>
+    let submitBtn = addBookForm.submitBtn;
+    submitBtn.addEventListener("click", (e) => {
+        let title = addBookForm.title.value;
+        let author = addBookForm.author.value;
+        let date = addBookForm.date.value;
+        let json = JSON.stringify(
+            {
+                "Title": title,
+                "Author": author,
+                "Publish_Date": date
+            }
+        )
+        let request = new XMLHttpRequest();
+        request.open("POST", "http://localhost:5284/books");
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        request.send(json);
+    })
+</script>
