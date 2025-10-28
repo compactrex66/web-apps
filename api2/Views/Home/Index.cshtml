@@ -22,9 +22,19 @@
                     <td>${element.title}</td>
                     <td>${element.author}</td>
                     <td>${element.publishDate}</td>
+                    <td><button onclick='deleteBook(${element.id})'>X</button></td>
                 </tr>
             `;
         })
     }
     request.send();
+
+    function deleteBook(id) {
+        let request = new XMLHttpRequest();
+        request.open("DELETE", `http://localhost:5284/books/${id}`);
+        request.onload = () => {
+            window.location.reload();
+        }
+        request.send();
+    }
 </script>
