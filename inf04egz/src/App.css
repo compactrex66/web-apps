@@ -1,4 +1,38 @@
+body {
+    overflow: hidden;
+    background-color: #FFF8DC;
+}
+.container {
+  box-sizing: border-box;
+  padding: 30px 50px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 .color-rect {
+  width: 100%;
+  height: 200px;
+}
+.left-aligned {
+  align-self: flex-start;
+}
+.slider-element {
+  display: flex;
+  width: 100%;
+}
+.slider {
+  flex-grow: 1;
+}
+button {
+  background-color: #CD853F;
+  border: 0;
+  height: 50px;
   width: 200px;
-  height: 100px;
+}
+.color-label {
+  height: 50px;
+  width: 200px;
 }
